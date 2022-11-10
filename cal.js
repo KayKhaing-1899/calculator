@@ -98,3 +98,8 @@ function point() {
     else
         document.getElementById("display").value += "."
 }
+
+// equal
+function equal() {
+    document.getElementById("display").value = eval(document.getElementById("display").value)
+}
