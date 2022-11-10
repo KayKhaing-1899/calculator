@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    color: #fff;
+    background-color: black;
+    width: 270px;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+.btn{
+    height: auto;
+    width: 50px;
+}
+#ac,#eq{
+    width: 100px;
+}
+.display{
+    text-align: right;
+}
