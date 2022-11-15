@@ -64,8 +64,8 @@ equal.addEventListener("click",function() {
 
 const dot =document.getElementById("decimal")
 dot.addEventListener("click",function() {
-    if(str.innerText == " ")
-        str.innerText = "."
+    if(str.innerText == "0")
+        str.innerText += "."
     else if(str.innerText == "." || str.innerText.endsWith("."))
         str.innerText = str.innerText
     else
