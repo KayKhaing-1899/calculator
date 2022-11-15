@@ -1,105 +1,153 @@
-// clear
-const allClear = document.getElementById("ac")
-allClear.addEventListener("click",function() {
-    document.querySelector("#display").value = " "
+var str = document.getElementById("display")
+
+const allclear = document.getElementById("clear")
+allclear.addEventListener("click",function() {
+    str.innerText = "0"
 })
 
-// delete
-const del = document.getElementById("del")
-del.addEventListener("click",function() {
-    const num = document.querySelector("#display").value.slice(0,-1)
-    document.getElementById("display").value = num
+const min = document.getElementById("minus")
+min.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "-"
+    else if(str.innerText.startsWith("-"))
+        str.innerText = str.innerText
+    else
+        str.innerText = "-" + str.innerText
 })
 
-// seven
-function seven() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "7"
+const mod =document.getElementById("modulus")
+mod.addEventListener("click",function() {
+    if(str.innerText == "0" || str.innerText.endsWith("%"))
+        str.innerText = str.innerText
     else
-        document.getElementById("display").value += "7"
-}
+        str.innerText += "%"
+})
 
-// eight
-function eight() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "8"
+const div =document.getElementById("divide")
+div.addEventListener("click",function() {
+    if(str.innerText == "0" || str.innerText.endsWith("/"))
+        str.innerText = str.innerText
     else
-        document.getElementById("display").value += "8"
-}
+        str.innerText += "/"
+})
 
-// nine
-function nine() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "9"
+const multi =document.getElementById("multiply")
+multi.addEventListener("click",function() {
+    if(str.innerText == "0" || str.innerText.endsWith("*"))
+        str.innerText = str.innerText
     else
-        document.getElementById("display").value += "9"
-}
+        str.innerText += "*"
+})
 
-// four
-function four() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "4"
+const sub =document.getElementById("substract")
+sub.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "-"
+    else if(str.innerText.endsWith("-"))
+        str.innerText = str.innerText
     else
-        document.getElementById("display").value += "4"
-}
+        str.innerText += "-"
+})
 
-// five
-function five() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "5"
+const add =document.getElementById("add")
+add.addEventListener("click",function() {
+    if(str.innerText == "0" || str.innerText.endsWith("+"))
+        str.innerText = str.innerText
     else
-        document.getElementById("display").value += "5"
-}
+        str.innerText += "+"
+})
 
-// six
-function six() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "6"
+const equal = document.getElementById("equals")
+equal.addEventListener("click",function() {
+    str.innerText = eval(str.innerText)
+})
+
+const dot =document.getElementById("decimal")
+dot.addEventListener("click",function() {
+    if(str.innerText == " ")
+        str.innerText = "."
+    else if(str.innerText == "." || str.innerText.endsWith("."))
+        str.innerText = str.innerText
     else
-        document.getElementById("display").value += "6"
-}
+        str.innerText += "."
+})
 
-// one
-function one() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "1"
+const one =document.getElementById("one")
+one.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "1"
     else
-        document.getElementById("display").value += "1"
-}
+        str.innerText += "1"
+})
 
-// two
-function two() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "2"
+const two =document.getElementById("two")
+two.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "2"
     else
-        document.getElementById("display").value += "2"
-}
+        str.innerText += "2"
+})
 
-// three
-function three() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "3"
+const three =document.getElementById("three")
+three.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "3"
     else
-        document.getElementById("display").value += "3"
-}
+        str.innerText += "3"
+})
 
-// zero
-function zero() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "0"
+const four =document.getElementById("four")
+four.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "4"
     else
-        document.getElementById("display").value += "0"
-}
+        str.innerText += "4"
+})
 
-// point
-function point() {
-    if(document.getElementById("display").value == " ")
-        document.getElementById("display").value = "."
+const five =document.getElementById("five")
+five.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "5"
     else
-        document.getElementById("display").value += "."
-}
+        str.innerText += "5"
+})
 
-// equal
-function equal() {
-    document.getElementById("display").value = eval(document.getElementById("display").value)
-}
+const six =document.getElementById("six")
+six.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "6"
+    else
+        str.innerText += "6"
+})
+
+const seven =document.getElementById("seven")
+seven.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "7"
+    else
+        str.innerText += "7"
+})
+
+const eight =document.getElementById("eight")
+eight.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "8"
+    else
+        str.innerText += "8"
+})
+
+const nine =document.getElementById("nine")
+nine.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "9"
+    else
+        str.innerText += "9"
+})
+
+const zero =document.getElementById("zero")
+zero.addEventListener("click",function() {
+    if(str.innerText == "0")
+        str.innerText = "0"
+    else
+        str.innerText += "0"
+})
