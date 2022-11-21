@@ -17,7 +17,7 @@ min.addEventListener("click",function() {
 
 const mod =document.getElementById("modulus")
 mod.addEventListener("click",function() {
-    if(str.innerText == "0" || str.innerText.endsWith("%"))
+    if(str.innerText == "0" || str.innerText.endsWith("%") || str.innerText.endsWith("+") || str.innerText.endsWith("-") || str.innerText.endsWith("*") || str.innerText.endsWith("/"))
         str.innerText = str.innerText
     else
         str.innerText += "%"
@@ -25,7 +25,7 @@ mod.addEventListener("click",function() {
 
 const div =document.getElementById("divide")
 div.addEventListener("click",function() {
-    if(str.innerText == "0" || str.innerText.endsWith("/"))
+    if(str.innerText == "0" || str.innerText.endsWith("%") || str.innerText.endsWith("+") || str.innerText.endsWith("-") || str.innerText.endsWith("*") || str.innerText.endsWith("/"))
         str.innerText = str.innerText
     else
         str.innerText += "/"
@@ -33,7 +33,7 @@ div.addEventListener("click",function() {
 
 const multi =document.getElementById("multiply")
 multi.addEventListener("click",function() {
-    if(str.innerText == "0" || str.innerText.endsWith("*"))
+    if(str.innerText == "0" || str.innerText.endsWith("%") || str.innerText.endsWith("+") || str.innerText.endsWith("-") || str.innerText.endsWith("*") || str.innerText.endsWith("/"))
         str.innerText = str.innerText
     else
         str.innerText += "*"
@@ -43,7 +43,7 @@ const sub =document.getElementById("substract")
 sub.addEventListener("click",function() {
     if(str.innerText == "0")
         str.innerText = "-"
-    else if(str.innerText.endsWith("-"))
+    else if(str.innerText.endsWith("-") || str.innerText.endsWith("%") || str.innerText.endsWith("+") || str.innerText.endsWith("*") || str.innerText.endsWith("/"))
         str.innerText = str.innerText
     else
         str.innerText += "-"
@@ -51,7 +51,7 @@ sub.addEventListener("click",function() {
 
 const add =document.getElementById("add")
 add.addEventListener("click",function() {
-    if(str.innerText == "0" || str.innerText.endsWith("+"))
+    if(str.innerText == "0" || str.innerText.endsWith("%") || str.innerText.endsWith("+") || str.innerText.endsWith("-") || str.innerText.endsWith("*") || str.innerText.endsWith("/"))
         str.innerText = str.innerText
     else
         str.innerText += "+"
