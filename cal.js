@@ -43,7 +43,7 @@ const sub =document.getElementById("substract")
 sub.addEventListener("click",function() {
     if(str.innerText == "0")
         str.innerText = "-"
-    else if(str.innerText.endsWith("-") || str.innerText.endsWith("%") || str.innerText.endsWith("+") || str.innerText.endsWith("*") || str.innerText.endsWith("/"))
+    else if(str.innerText.endsWith("-"))
         str.innerText = str.innerText
     else
         str.innerText += "-"
